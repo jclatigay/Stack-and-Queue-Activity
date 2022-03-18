@@ -1,42 +1,34 @@
 /*hello test*/
 public class Queue {
-    private static class Node {
-        private int data;
-        private Node next;
-        private Node(int data) {
-            this.data = data;
+    public Node front;
+    public Node rear;
+
+    public Queue() {
+        front = null;
+        rear = null;
+    }
+
+    public void Enqueue(int data) {
+        Node temp = new Node(data);
+
+        if (rear == null) {
+            front = rear = temp;
         }
+        rear.next = temp;
+        rear = temp;
     }
 
-    private Node head;
-    private Node tail;
-
-    public boolean isEmpty() {
-        return head == null;
-    }
-
-    public int peek() {
-        return head.data;
-    }
-
-    public void add(int data) {
-        Node node = new Node(data);
-        if (tail != null) {
-            tail.next = node;
+    public void Dequeue() {
+        if (front == null) {
+            System.out.println("Error! Queue is empty.");
         }
-        tail = node;
-        if (head == null) {
-            head = node;
-        }
-    }
 
-    public int remove() {
-        int data = head.data;
-        head = head.next;
-        if (head == null) {
-            tail = null;
+        front = front.next;
+        
+        if (front == null) {
+            rear = null;
         }
-        return data;
+        
     }
-
+    
 }
