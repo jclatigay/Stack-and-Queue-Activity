@@ -1,4 +1,4 @@
-/*hello test*/
+
 public class Queue {
     public Node front;
     public Node rear;
@@ -24,7 +24,7 @@ public class Queue {
         }
 
         front = front.next;
-        
+        //sets the next in queue therefore removing the current
         if (front == null) {
             rear = null;
         }

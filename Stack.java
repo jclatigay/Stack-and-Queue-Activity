@@ -20,13 +20,14 @@ public class Stack {
             System.out.println("Stack has no elements");
         }
         top = top.next;
+        //sets top pointer to the next node
     }
 
 
     public int Peek() {
         if (top != null) {
 			return top.Data;
-		}
+        } //checks for empty stack
 		else {
 			System.out.println("Stack has no elements");
 			return 0;
