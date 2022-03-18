@@ -42,7 +42,7 @@ public class Stack {
 			Node temp = top;
 			while (temp != null) {
 
-				System.out.printf("%d->", temp.Data);
+				System.out.printf("%d --> ", temp.Data);
 
 				temp = temp.next;
 			}

@@ -3,33 +3,37 @@ public class Demo {
         
         Stack stack = new Stack();
         
-		stack.Push(11);
-		stack.Push(22);
-		stack.Push(33);
-		stack.Push(44);
+		stack.Push(34);
+		stack.Push(234);
+		stack.Push(536);
+		stack.Push(985);
 
 		stack.Print();
 
-		System.out.printf("\nTop element is %d\n", stack.Peek());
+		System.out.printf("\nElement on top of the stack is %d\n", stack.Peek());
 
 		stack.Pop();
 		stack.Pop();
 
 		stack.Print();
 
-		System.out.printf("\nTop element is %d\n", stack.Peek());
+		System.out.printf("\nElement on top of the stack is %d\n", stack.Peek());
 
         Queue q = new Queue();
-        q.Enqueue(10);
-        q.Enqueue(20);
+
+        q.Enqueue(23);
+        q.Enqueue(45);
         q.Dequeue();
         q.Dequeue();
-        q.Enqueue(30);
-        q.Enqueue(40);
-        q.Enqueue(50);
+        q.Enqueue(65);
+        q.Enqueue(78);
+        q.Enqueue(94);
+        q.Enqueue(99);
         q.Dequeue();
-        System.out.println("Queue Front : " + q.front.Data);
-        System.out.println("Queue Rear : " + q.rear.Data);
+        q.Dequeue();
+
+        System.out.println("\nElement at front the of queue is : " + q.front.Data);
+        System.out.println("Element at the rear is : " + q.rear.Data);
 
     }
 }
