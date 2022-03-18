@@ -1,32 +1,52 @@
 public class Stack {
-    private static class Node {
-        private int data;
-        private Node next;
-        private Node(int data) {
-            this.data = data;
-        }
-    }
-
     private Node top;
 
-    public boolean isEmpty() {
-        return top == null;
+    public Stack() {
+        top = null;
     }
 
-    public int peek() {
-        return top.data;
-    }
-
-    public void push(int data) {
+    public void Push(int data) {
         Node node = new Node(data);
+
+        node.Data = data;
+    
         node.next = top;
+    
         top = node;
     }
 
-    public int pop() {
-        int data = top.data;
+    public void Pop() {
+        if (top == null) {
+            System.out.println("Stack has no elements");
+        }
         top = top.next;
-        return data;
     }
+
+
+    public int Peek() {
+        if (top != null) {
+			return top.Data;
+		}
+		else {
+			System.out.println("Stack has no elements");
+			return 0;
+		}
+    }
+
+    public void Print()
+	{
+		if (top == null) {
+			System.out.println("Stack has no elements");
+		}
+		else {
+			Node temp = top;
+			while (temp != null) {
+
+				System.out.printf("%d->", temp.Data);
+
+				temp = temp.next;
+			}
+		}
+	}
 
 }
